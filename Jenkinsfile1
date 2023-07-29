@@ -20,13 +20,6 @@ pipeline {
        echo "this is new Build stage"
       }
     }
-
-      stages {
-    stage ('BUILD') {
-      steps {
-       echo "this is new Build stage"
-      }
-    }
    }
 
 }
