@@ -18,6 +18,18 @@ pipeline {
        echo "this is new Build stage"
       }
     }
+
+    stage ('BUILD') {
+      steps {
+       echo "this is new Build stage"
+      }
+    } 
+
+    stage ('BUILD') {
+      steps {
+       echo "this is new Build stage"
+      }
+    }
    }
 
 }
