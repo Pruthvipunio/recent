@@ -6,25 +6,22 @@ pipeline {
        echo "this is new Build stage"
       }
     }
-   
+
+    stages {
     stage ('DEPLOY') {
       steps {
        echo "this is new Build stage"
       }
     }
 
-     stage ('TEST') {
+    stages {
+    stage ('TEST') {
       steps {
        echo "this is new Build stage"
       }
     }
 
-    stage ('BUILD') {
-      steps {
-       echo "this is new Build stage"
-      }
-    } 
-
+      stages {
     stage ('BUILD') {
       steps {
        echo "this is new Build stage"
