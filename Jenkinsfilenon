@@ -3,14 +3,14 @@ pipeline {
    stages {
      stage ('BUILD') {
            agent {label 'slave 1'}
-       step {
+       steps {
         echo "This is Build stage"
        }
      }
 
      stage ('DEPLOY') {
            agent {label 'slave 3'}
-       step { 
+       steps { 
          echo "This is Deploy stage"
        }
      }
