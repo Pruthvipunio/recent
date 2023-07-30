@@ -9,19 +9,29 @@ pipeline {
       }
     }
 
-    stages {
     stage ('DEPLOY') {
       steps {
        echo "this is new Build stage"
       }
     }
-
-    stages {
+   prallel {
     stage ('TEST') {
       steps {
-       echo "this is new Build stage"
+       echo "this is new Build stage"}
       }
     }
-   }
 
-}
+   stage ('TEST 1') {
+      steps {
+       echo "this is new Build stage"}
+      }
+    }
+
+   stage ('TEST 2') {
+      steps {
+       echo "this is new Build stage"}
+      }
+    }
+   
+
+
