@@ -1,0 +1,19 @@
+pipeline {
+   agent non
+   stages {
+     stage ('BUILD') {
+           agent {lable 'slv1'}
+       step {
+        echo "This is Build stage"
+       }
+     }
+
+     stage ('DEPLOY') {
+           agent {lable 'slv3'}
+       step { 
+         echo "This is Deploy stage"
+       }
+     }
+   }
+
+}
