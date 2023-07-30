@@ -1,0 +1,14 @@
+pipeline {
+  agent any
+  stages {
+    stage ('TEST') {
+      parallel {
+        stage ('TEST 1'){
+          steps {
+          echo "This is TEST 1"}
+        }
+      }
+    }
+  }
+
+}
