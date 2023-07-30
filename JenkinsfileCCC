@@ -8,14 +8,14 @@ pipeline {
         }
      }
 
-     stage ('BUILD') {
+     stage ('TEST') {
         step {
           echo "This is Build stage"
           sh 'sleep 5'
         }
      }
 
-     stage ('BUILD') {
+     stage ('DEPLOY') {
         step {
           echo "This is Build stage"
           sh 'sleep 5'
