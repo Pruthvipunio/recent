@@ -1,0 +1,18 @@
+pipeline {
+  agent none
+  stages {
+    stage ('BUILD') {
+      agent {Label 'agnt1'}
+      steps {
+        echo "This is Build stage"
+      }
+    }
+    stage ('DEPLOY') {
+      agent {Label 'agnt3'}
+      steps {
+        echo "This is Build stage"
+      }
+    }
+  }
+
+}
