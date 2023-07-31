@@ -2,15 +2,24 @@ pipeline {
   agent none
   stages {
     stage ('BUILD') {
-      agent {Label 'agnt1'}
+      agent {Label 'masterslave'}
       steps {
         echo "This is Build stage"
+        sh 'sleep 5'
       }
     }
-    stage ('DEPLOY') {
-      agent {Label 'agnt3'}
+stage ('DEPLOY') {
+      agent {Label 'slave1'}
       steps {
-        echo "This is Build stage"
+        echo "This is Deploy stage"
+        sh 'sleep 5'
+      }
+    }
+stage ('TEST') {
+      agent {Label 'slave2'}
+      steps {
+        echo "This is Test stage"
+        sh 'sleep 5'
       }
     }
   }
