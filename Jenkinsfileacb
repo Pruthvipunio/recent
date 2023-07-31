@@ -1,6 +1,6 @@
 pipeline {
   agent none
-  satges {
+  stages {
      stage ('BUILD') {
        agent { label 'masterslave' }
        steps {
@@ -22,7 +22,5 @@ pipeline {
          sh 'sleep 5'
         }
      }
-
   }
-
 }
