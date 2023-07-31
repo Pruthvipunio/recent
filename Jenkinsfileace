@@ -5,11 +5,13 @@ pipeline {
        parallel {
          stage ('TEST 1') {
             steps {
-                 echo "this is testing satge"}
+                 echo "this is testing satge"
+            }
           }
          stage ('TEST 2') {
             steps {
-                 echo "this is testing satge"}
+                 echo "this is testing satge"
+            }
           }
       }
     }
