@@ -1,0 +1,28 @@
+pipeline {
+  agent none
+  satges {
+     stage ('BUILD') {
+       agent { label 'masterslave' }
+       steps {
+         echo "This is Build satge"
+         sh 'sleep 5'
+        }
+     }
+  stage ('DEPLOY') {
+       agent { label 'slave1' }
+       steps {
+         echo "This is Deploy satge"
+         sh 'sleep 5'
+        }
+     }
+  stage ('TEST') {
+       agent { label 'slave2' }
+       steps {
+         echo "This is Test satge"
+         sh 'sleep 5'
+        }
+     }
+
+  }
+
+}
