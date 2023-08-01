@@ -1,0 +1,19 @@
+pipeline {
+  agent any
+  stages {
+    stage ('TEST') {
+      parallel {
+        satge (TEST 1) {
+          steps {
+             echo "this is test1 stage"}
+             sh 'sleep 5'
+        }
+        satge (TEST 2) {
+          steps {
+             echo "this is test2 stage"}
+             sh 'sleep 5'
+        }
+      }
+    }
+  }
+}
