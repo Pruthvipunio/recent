@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage ('TEST') {
       parallel {
-        satge (TEST 1) {
+        stage (TEST 1) {
           steps {
              echo "this is test1 stage"}
              sh 'sleep 5'
         }
-        satge (TEST 2) {
+        stage (TEST 2) {
           steps {
              echo "this is test2 stage"}
              sh 'sleep 5'
